@@ -48,5 +48,7 @@ ENV FLUENTD_CONF="fluent.conf"
 # -> td-agent (stable) vs fluentd (edge)
 #ENV LD_PRELOAD="/usr/lib/libjemalloc.so.2"
 
+RUN ["chmod", "+x", "/fluentd/entrypoint.sh"]
+
 # Run Fluentd
 CMD ["/fluentd/entrypoint.sh"]
